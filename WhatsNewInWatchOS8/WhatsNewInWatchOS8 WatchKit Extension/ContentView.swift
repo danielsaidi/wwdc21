@@ -20,6 +20,18 @@ struct ContentView: View {
                     .opacity(isLuminanceReduced ?  0.5 : 1)
                 Text("Redacted in Always On")
                     .isRedacted(isLuminanceReduced)
+                
+                LocationButton(.currentLocation) {
+                    // Do something
+                }
+                .foregroundColor(.white)
+                .labelStyle(.iconOnly)
+                .symbolVariant(.fill)
+                .tint(.blue)
+                .frame(width: 50, height: 50)
+                .cornerRadius(25)
+                .shadow(color: .white, radius: 1, x: 0, y: 3)
+                
             }.padding()
         }
     }

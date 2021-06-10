@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ScrollView(.vertical) {
-            LazyVStack {
-                ForEach(0..<100) { _ in
+            VStack {
+                ForEach(0..<20) { _ in
                     ScrollView(.horizontal) {
-                        LazyHStack {
-                            ForEach(0..<100) { index in
-                                Button("\(index)") {
-                                    print(index)
+                        HStack {
+                            ForEach(0..<20) { index in
+                                Button(action: {}) {
+                                    [Color.red, Color.green, Color.orange].randomElement().frame(width: 150, height: 250)
                                 }
                             }
                         }
